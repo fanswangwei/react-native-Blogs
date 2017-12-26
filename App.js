@@ -8,19 +8,19 @@ import React, { Component } from 'react';
 import {
     StackNavigator,
 } from 'react-navigation';
-
 import {
-    Platform,
-    StyleSheet,
-    Text,
-    View
+  Platform,
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 
 import NavRouters from "./components/navRouters";
 export default class App extends Component<{}> {
-    render() {
-        return (
+  render() {
+    return (
             <NavRouters></NavRouters>
-        );
-    }
+    );
+  }
 }
+

@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.reactnativeblogs;
 
 import android.app.Application;
 
