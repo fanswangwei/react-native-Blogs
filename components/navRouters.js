@@ -29,6 +29,7 @@ const findIconActive = require('./../resources/find-active.png');
 const stateIconActive = require('./../resources/state-active.png');
 const meIconActive = require('./../resources/me-active.png');
 
+// 底部导航
 const TabNav = TabNavigator({
     HomeIndex: {
         screen: HomeIndex,
@@ -54,7 +55,7 @@ const TabNav = TabNavigator({
     initialRouteName: '', // 设置默认的页面组件
     backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
     tabBarOptions :{
-        activeTintColor:'#2193f6', // label和icon的前景色 活跃状态下（选中）。
+        activeTintColor:'#d81e06', // label和icon的前景色 活跃状态下（选中）。
         inactiveTintColor:'#666', // label和icon的前景色 不活跃状态下(未选中)。
         showIcon :true, // 是否显示图标，默认关闭。
         showLabel: true, // android 是否展现文字 默认 true 
@@ -71,6 +72,7 @@ const TabNav = TabNavigator({
         labelStyle: {   // label的样式
             height: 20,
             fontSize: 14,
+            fontFamily: 'KaiTi',
         },
         iconStyle: {
             width: 20,
@@ -82,6 +84,17 @@ const TabNav = TabNavigator({
         }
     }
 });
+// 顶部导航
+const HeadNav = StackNavigator({
+    // 对应界面名称
+    // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
+    MyTab: {
+        screen: TabNav,
+        navigationOptions: {
+            headerTitle: '导航'
+        }
+    },
+})
 const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
     // console.log(navigation);
     const tabBarLabel = tabBarTitle;
@@ -94,4 +107,4 @@ const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
     });
     return {tabBarLabel,tabBarIcon};
 };
-export default TabNav;
+export default HeadNav;
