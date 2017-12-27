@@ -84,17 +84,6 @@ const TabNav = TabNavigator({
         }
     }
 });
-// 顶部导航
-const HeadNav = StackNavigator({
-    // 对应界面名称
-    // 将TabNavigator包裹在StackNavigator里面可以保证跳转页面的时候隐藏tabbar
-    MyTab: {
-        screen: TabNav,
-        navigationOptions: {
-            headerTitle: '导航'
-        }
-    },
-})
 const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
     // console.log(navigation);
     const tabBarLabel = tabBarTitle;
@@ -107,4 +96,4 @@ const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
     });
     return {tabBarLabel,tabBarIcon};
 };
-export default HeadNav;
+export default TabNav;
