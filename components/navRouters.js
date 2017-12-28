@@ -19,6 +19,7 @@ import HomeIndex from './../pages/homeIndex';
 import Findings from './../pages/findings';
 import StateNews from './../pages/stateNews';
 import AboutMe from './../pages/aboutMe';
+import IndexHeadNav from './../components/index/headNav';
 
 const indexIcon = require('./../resources/index.png');
 const findIcon = require('./../resources/find.png');
@@ -33,7 +34,16 @@ const meIconActive = require('./../resources/me-active.png');
 const TabNav = TabNavigator({
     HomeIndex: {
         screen: HomeIndex,
-        navigationOptions: ()=> TabOptions('首页',indexIcon,indexIconActive),
+        navigationOptions: {
+            tabBarLabel: '首页',
+            tabBarIcon:({tintColor,focused})=> {   // tintColor激活前后的颜色，focused激活状态
+                return(
+                    <Image
+                        source={!focused ? indexIcon : indexIconActive}
+                    />
+                )
+            }
+        },
     },
     Findings: {
         screen: Findings,
@@ -84,7 +94,14 @@ const TabNav = TabNavigator({
         }
     }
 });
-const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
+// 初始化StackNavigator
+const HeadNav = StackNavigator({
+    // 将需要跳转的页面注册在这里，全局才可以跳转
+    MyTab:{
+        screen:TabNav
+    }
+})
+const TabOptions = (tabBarTitle,normalImage,selectedImage) => {
     // console.log(navigation);
     const tabBarLabel = tabBarTitle;
     const tabBarIcon = (({tintColor,focused})=> {   // tintColor激活前后的颜色，focused激活状态
@@ -96,4 +113,4 @@ const TabOptions = (tabBarTitle,normalImage,selectedImage,navTitle) => {
     });
     return {tabBarLabel,tabBarIcon};
 };
-export default TabNav;
+export default HeadNav;
