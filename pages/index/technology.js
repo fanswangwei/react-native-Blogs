@@ -4,7 +4,7 @@ import { AppRegistry, View, Text } from 'react-native';
 export default class Technology extends Component{
     render() {
         return (
-            <View>科技</View>
+            <View><Text>科技</Text></View>
         )
     }
 }
