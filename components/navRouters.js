@@ -75,7 +75,7 @@ const TabNav = TabNavigator({
             height: 0  // 如TabBar下面显示有一条线，可以设高度为0后隐藏
         },
         style: {    // tabbar的样式。
-            height: 50,
+            height: 60,
             backgroundColor: '#fff',
         },
         labelStyle: {   // label的样式
@@ -89,7 +89,7 @@ const TabNav = TabNavigator({
             top: 10
         },
         tabStyle:{  // tab的样式
-            height: 50,
+            height: 60,
         }
     }
 });
