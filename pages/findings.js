@@ -39,9 +39,10 @@ const styles = StyleSheet.create({
     ScrollableTabView:{
         flexDirection: 'row',
         height: 30,
+        backgroundColor:'#fff',
     },
     tabBarTextStyle:{
-        fontSize: 12,
+        fontSize: 13,
         fontWeight: 'normal',
         lineHeight: 25,
     },

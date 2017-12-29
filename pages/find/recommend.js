@@ -4,7 +4,7 @@ import { AppRegistry, View, Text } from 'react-native';
 export default class Recommend extends Component{
     render() {
         return (
-            <View><Text>推荐</Text></View>
+            <View style={{backgroundColor:'#ff7f50'}}><Text>推荐</Text></View>
         )
     }
 }
