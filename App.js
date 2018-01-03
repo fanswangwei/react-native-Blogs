@@ -4,9 +4,11 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import {
-    StackNavigator,
+  StackNavigator,
 } from 'react-navigation';
 import {
   Platform,
@@ -16,11 +18,10 @@ import {
 } from 'react-native';
 
 import NavRouters from "./components/navRouters";
-export default class App extends Component<{}> {
+export default class App extends Component < {} > {
   render() {
     return (
-            <NavRouters></NavRouters>
+      <NavRouters></NavRouters>
     );
   }
 }
-

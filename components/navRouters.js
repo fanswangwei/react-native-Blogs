@@ -35,8 +35,11 @@ const TabNav = TabNavigator({
         screen: HomeIndex,
         navigationOptions: {
             tabBarLabel: '首页',
-            tabBarIcon:({tintColor,focused})=> {   // tintColor激活前后的颜色，focused激活状态
-                return(
+            tabBarIcon: ({
+                tintColor,
+                focused
+            }) => { // tintColor激活前后的颜色，focused激活状态
+                return (
                     <Image
                         source={!focused ? indexIcon : indexIconActive}
                     />
@@ -46,39 +49,39 @@ const TabNav = TabNavigator({
     },
     Findings: {
         screen: Findings,
-        navigationOptions: ()=> TabOptions('发现',findIcon,findIconActive),
+        navigationOptions: () => TabOptions('发现', findIcon, findIconActive),
     },
-    StateNews:{
+    StateNews: {
         screen: StateNews,
-        navigationOptions: ()=> TabOptions('动态',stateIcon,stateIconActive),
-    },    
-    AboutMe:{
-        screen: AboutMe,
-        navigationOptions: ()=> TabOptions('我',meIcon,meIconActive),
+        navigationOptions: () => TabOptions('动态', stateIcon, stateIconActive),
     },
-},{
+    AboutMe: {
+        screen: AboutMe,
+        navigationOptions: () => TabOptions('我', meIcon, meIconActive),
+    },
+}, {
     tabBarPosition: 'bottom', // 设置tabbar的位置，iOS默认在底部，安卓默认在顶部。（属性值：'top'，'bottom')
     swipeEnabled: false, // 是否允许在标签之间进行滑动。
     animationEnabled: false, // 是否在更改标签时显示动画。
     lazy: true, // 是否根据需要懒惰呈现标签，而不是提前制作，意思是在app打开的时候将底部标签栏全部加载，默认false,推荐改成true哦。
     initialRouteName: '', // 设置默认的页面组件
     backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
-    tabBarOptions :{
-        activeTintColor:'#d81e06', // label和icon的前景色 活跃状态下（选中）。
-        inactiveTintColor:'#666', // label和icon的前景色 不活跃状态下(未选中)。
-        showIcon :true, // 是否显示图标，默认关闭。
+    tabBarOptions: {
+        activeTintColor: '#d81e06', // label和icon的前景色 活跃状态下（选中）。
+        inactiveTintColor: '#666', // label和icon的前景色 不活跃状态下(未选中)。
+        showIcon: true, // 是否显示图标，默认关闭。
         showLabel: true, // android 是否展现文字 默认 true 
-        upperCaseLabel : false, //android 文字是否需要大写 默认true 
-        pressColor : 'blue', // android 按压时显示的颜色 
-        scrollEnabled : false,
+        upperCaseLabel: false, //android 文字是否需要大写 默认true 
+        pressColor: 'blue', // android 按压时显示的颜色 
+        scrollEnabled: false,
         indicatorStyle: {
-            height: 0  // 如TabBar下面显示有一条线，可以设高度为0后隐藏
+            height: 0 // 如TabBar下面显示有一条线，可以设高度为0后隐藏
         },
-        style: {    // tabbar的样式。
+        style: { // tabbar的样式。
             height: 60,
             backgroundColor: '#fff',
         },
-        labelStyle: {   // label的样式
+        labelStyle: { // label的样式
             height: 20,
             fontSize: 14,
             fontFamily: 'KaiTi',
@@ -88,21 +91,27 @@ const TabNav = TabNavigator({
             position: 'relative',
             top: 10
         },
-        tabStyle:{  // tab的样式
+        tabStyle: { // tab的样式
             height: 60,
         }
     }
 });
-const TabOptions = (tabBarTitle,normalImage,selectedImage) => {
+const TabOptions = (tabBarTitle, normalImage, selectedImage) => {
     // console.log(navigation);
     const tabBarLabel = tabBarTitle;
-    const tabBarIcon = (({tintColor,focused})=> {   // tintColor激活前后的颜色，focused激活状态
-        return(
+    const tabBarIcon = (({
+        tintColor,
+        focused
+    }) => { // tintColor激活前后的颜色，focused激活状态
+        return (
             <Image
                 source={!focused ? normalImage : selectedImage}
             />
         )
     });
-    return {tabBarLabel,tabBarIcon};
+    return {
+        tabBarLabel,
+        tabBarIcon
+    };
 };
 export default TabNav;

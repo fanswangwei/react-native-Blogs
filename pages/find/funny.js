@@ -1,9 +1,14 @@
-import React, {Component} from "react";
-import { AppRegistry, View, Text } from 'react-native';
+import React, {
+    Component
+} from "react";
+import {
+    AppRegistry,
+    View,
+    Text
+} from 'react-native';
 
-export default class Funny extends Component{
+export default class Funny extends Component {
     render() {
-        return (<View><Text>搞笑</Text></View>
-        )
+        return (<View><Text>搞笑</Text></View>)
     }
 }

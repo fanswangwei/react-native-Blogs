@@ -1,6 +1,16 @@
-import React, { Component } from 'react';
-import { AppRegistry, View, Text, StyleSheet, ScrollView } from 'react-native';
-import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
+import React, {
+    Component
+} from 'react';
+import {
+    AppRegistry,
+    View,
+    Text,
+    StyleSheet,
+    ScrollView
+} from 'react-native';
+import ScrollableTabView, {
+    ScrollableTabBar,
+} from 'react-native-scrollable-tab-view';
 
 import Recommend from './find/recommend';
 import News from './find/news';
@@ -26,27 +36,26 @@ export default class HomeIndex extends Component {
                         <Auto tabLabel="汽车"/>
                         <Sport tabLabel="体育"/>
                     </ScrollableTabView>
-                </View>
-        );
+                </View>);
     }
 };
 //样式列表
 const styles = StyleSheet.create({
-    ViewStyle:{
+    ViewStyle: {
         flex: 1,
         height: '100%',
     },
-    ScrollableTabView:{
+    ScrollableTabView: {
         flexDirection: 'row',
         height: 30,
-        backgroundColor:'#fff',
+        backgroundColor: '#fff',
     },
-    tabBarTextStyle:{
+    tabBarTextStyle: {
         fontSize: 13,
         fontWeight: 'normal',
         lineHeight: 25,
     },
-    tabBarUnderlineStyle:{
+    tabBarUnderlineStyle: {
         backgroundColor: '#d81e06',
         height: 1,
     },
