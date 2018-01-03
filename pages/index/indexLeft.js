@@ -11,7 +11,7 @@ export default class IndexLeft extends Component {
     render() {
         return (
             <View>
-                <Text>左侧</Text>
+                <Text>左侧详情</Text>
             </View>
         );
     }
