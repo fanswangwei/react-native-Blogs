@@ -8,16 +8,15 @@ import {
     StyleSheet
 } from 'react-native';
 
-export default class StateNews extends Component {
+export default class Setting extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>动态</Text>
+                <Text>设置</Text>
             </View>
         );
     }
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,

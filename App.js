@@ -7,21 +7,12 @@
 import React, {
   Component
 } from 'react';
-import {
-  StackNavigator,
-} from 'react-navigation';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
 
-import NavRouters from "./components/navRouters";
+import RootRouters from "./rootRouters";
 export default class App extends Component < {} > {
   render() {
     return (
-      <NavRouters></NavRouters>
+      <RootRouters></RootRouters>
     );
   }
 }
