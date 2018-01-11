@@ -19,16 +19,16 @@ import {
 import HomeIndex from './pages/homeIndex';
 import TypeSelect from './pages/typeSelect';
 import StateNews from './pages/stateNews';
-import Setting from './pages/setting';
+import AboutMe from './pages/aboutMe';
 
 const indexIcon = require('./resources/index.png');
 const findIcon = require('./resources/find.png');
 const stateIcon = require('./resources/state.png');
-const setting = require('./resources/setting.png');
+const me = require('./resources/me.png');
 const indexIconActive = require('./resources/index-active.png');
 const findIconActive = require('./resources/find-active.png');
 const stateIconActive = require('./resources/state-active.png');
-const settingActive = require('./resources/setting-active.png');
+const meActive = require('./resources/me-active.png');
 
 const HeaderInput = ()=>{
     return <TextInput
@@ -92,18 +92,18 @@ const TabNav = TabNavigator({
             }
         }),
     },
-    Setting: {
-        screen: Setting,
+    AboutMe: {
+        screen: AboutMe,
         // navigationOptions: () => TabOptions('我', meIcon, meIconActive),
         navigationOptions: ({navigation, screenProps}) => ({
-            headerTitle: '设置',
+            headerTitle: '我的',
             headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
             headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
-            tabBarLabel: '设置',
+            tabBarLabel: '我的',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
                 return (
                     <Image
-                        source={!focused ? setting : settingActive}
+                        source={!focused ? me : meActive}
                     />
                 )
             }

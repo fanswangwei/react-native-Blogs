@@ -8,11 +8,11 @@ import {
     StyleSheet
 } from 'react-native';
 
-export default class Setting extends Component {
+export default class AboutMe extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>设置</Text>
+                <Text>关于我</Text>
             </View>
         );
     }
