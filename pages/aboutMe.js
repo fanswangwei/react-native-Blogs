@@ -8,11 +8,19 @@ import {
     StyleSheet
 } from 'react-native';
 
+import HeadPortrait from './aboutMe/headPortrait';
+import MineItem from './aboutMe/mineItem';
+
 export default class AboutMe extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>关于我</Text>
+                <HeadPortrait/>
+                <View style={styles.itemsContainer}>
+                    <MineItem/>
+                    <MineItem/>
+                    <MineItem/>
+                </View>
             </View>
         );
     }
@@ -20,6 +28,10 @@ export default class AboutMe extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
+    },
+    itemsContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
     }
 })
