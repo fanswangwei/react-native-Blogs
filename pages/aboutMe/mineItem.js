@@ -30,13 +30,15 @@ const styles = StyleSheet.create({
         position: 'relative',
         borderBottomWidth: 1,
         borderColor: '#cccccc',
-        borderStyle: 'solid',  
+        borderStyle: 'solid',
+        marginLeft: 10,
+        marginRight: 10,
 	},
 	icon: {
 		width: 15,
 		height: 15,
 		position: 'absolute',
-		top: 0,
+		top: 0.5,
 		left: 10,
 	},
 	title: {
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
 		width: 15,
 		height: 15,
 		position: 'absolute',
-		top: 0,
+		top: 0.5,
 		right: 10,
 	},
 })
