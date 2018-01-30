@@ -28,10 +28,10 @@ export default class AboutMe extends Component {
                         <MineItem props="我的主题"/>
                     </View>
                     <View style={[styles.borderBottom, styles.marginRow]}>
-                        <MineItem props="系统消息"/>
+                        <MineItem props="我的收藏"/>
                     </View>
                     <View style={styles.marginRow}>
-                        <MineItem props="活动推广"/>
+                        <MineItem props="系统消息"/>
                     </View>
                 </View>
                 <View style={[styles.activeContainer, styles.paddingRow]}>
