@@ -11,12 +11,12 @@ import {
 const Setting = require('./../../resources/setting.png');
 const ToRight = require('./../../resources/to-right.png');
 
-export default class HeadPortrait extends Component {
+export default class MainItem extends Component {
 	render () {
 		return (
 			<View style={styles.container}>
                 <Image source={Setting} style={styles.icon}/>
-                <Text style={styles.title}>公开博文</Text>
+                <Text style={styles.title}>个人信息</Text>
                 <Text style={styles.number}>1</Text>
                 <Image source={ToRight}  style={styles.toDetail}/>
 			</View>
@@ -28,36 +28,31 @@ const styles = StyleSheet.create({
 		height: 30,
 		marginTop: 15,
         position: 'relative',
-        borderBottomWidth: 1,
-        borderColor: '#cccccc',
-        borderStyle: 'solid',
-        marginLeft: 10,
-        marginRight: 10,
 	},
 	icon: {
 		width: 15,
 		height: 15,
 		position: 'absolute',
 		top: 0.5,
-		left: 10,
+		left: 3,
 	},
 	title: {
 		marginLeft: 20,
 		position: 'absolute',
 		top: -2,
-		left: 20,
+		left: 13,
 	},
 	number: {
 		width: '10%',
 		position: 'absolute',
 		top: -2,
-		right: 20,
+		right: 13,
 	},
 	toDetail: {
 		width: 15,
 		height: 15,
 		position: 'absolute',
 		top: 0.5,
-		right: 10,
+		right: 3,
 	},
 })

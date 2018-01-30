@@ -18,19 +18,27 @@ export default class AboutMe extends Component {
             <ScrollView style={styles.container}>
                 <HeadPortrait/>
                 <View style={styles.itemsContainer}>
-                    <MineItem style={styles.borderBottom}/>
-                    <MineItem style={styles.borderBottom}/>
-                    <MineItem style={styles.borderBottom}/>
-                    <MineItem style={styles.borderBottom}/>
-                    <MineItem/>
+                    <View style={[styles.borderBottom, styles.marginRow]}>
+                        <MineItem props="个人信息"/>
+                    </View>
+                    <View style={[styles.borderBottom, styles.marginRow]}>
+                        <MineItem props="我的分类"/>
+                    </View>
+                    <View style={[styles.borderBottom, styles.marginRow]}>
+                        <MineItem props="我的主题"/>
+                    </View>
+                    <View style={[styles.borderBottom, styles.marginRow]}>
+                        <MineItem props="系统消息"/>
+                    </View>
+                    <View style={styles.marginRow}>
+                        <MineItem props="活动推广"/>
+                    </View>
                 </View>
-                <View style={styles.activeContainer}>
-                    <MineItem/>
+                <View style={[styles.activeContainer, styles.paddingRow]}>
+                    <MineItem props="意见反馈"/>
                 </View>
-                <View style={styles.setting}>
-                    <MineItem/>
-                    <MineItem/>
-                    <MineItem/>
+                <View style={[styles.setting, styles.paddingRow]}>
+                    <MineItem props="设置"/>
                 </View>
             </ScrollView>
         );
@@ -40,23 +48,34 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
+        backgroundColor: '#eee'
     },
     itemsContainer: {
         width: '100%',
-        height: 230,
         backgroundColor: '#ffffff',
     },
-    borderBottom:{
+    borderBottom: {
         borderBottomWidth: 1,
-        borderColor: '#cccccc',
+        borderColor: '#eee',
         borderStyle: 'solid',
+    },
+    marginRow: {        
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    paddingRow: {        
+        paddingLeft: 10,
+        paddingRight: 10,
     },
     activeContainer: {
         width: '100%',
-        // height: ,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
     },
     setting: {
         width: '100%',
-        // height: ,
+        backgroundColor: '#ffffff',
+        marginTop: 10,
+        marginBottom: 10,
     }
 })
