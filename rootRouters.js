@@ -45,8 +45,9 @@ const TabNav = TabNavigator({
     HomeIndex: {
         screen: HomeIndex,
         navigationOptions: ({navigation, screenProps}) => ({
-            headerTitle: '首页',
-            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
+            // headerTitle: '首页',
+            headerStyle: {height: 0},
+            // headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
             headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '首页',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
@@ -63,7 +64,7 @@ const TabNav = TabNavigator({
         // navigationOptions: () => TabOptions('发现', findIcon, findIconActive),
         navigationOptions: ({navigation, screenProps}) => ({
             headerTitle: '定制分类',
-            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
+            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', backgroundColor: '#fdfdfd'},
             headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '分类',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
@@ -80,7 +81,7 @@ const TabNav = TabNavigator({
         // navigationOptions: () => TabOptions('动态', stateIcon, stateIconActive),
         navigationOptions: ({navigation, screenProps}) => ({
             headerTitle: '消息动态',
-            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
+            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', backgroundColor: '#fdfdfd'},
             headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '动态',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
@@ -110,7 +111,7 @@ const TabNav = TabNavigator({
         }),
     },
 }, {
-    initialRouteName: 'StateNews', // 默认显示界面  initialRouteName - 首次加载时初始标签路由的routeName
+    initialRouteName: 'HomeIndex', // 默认显示界面  initialRouteName - 首次加载时初始标签路由的routeName
     tabBarPosition: 'bottom', // 设置tabbar的位置，iOS默认在底部，安卓默认在顶部。（属性值：'top'，'bottom')
     swipeEnabled: false, // 是否允许在标签之间进行滑动。
     animationEnabled: true, // 是否在更改标签时显示动画。
@@ -129,7 +130,10 @@ const TabNav = TabNavigator({
         },
         style: { // tabbar的样式。
             height: 50,
-            backgroundColor: '#fff',
+            backgroundColor: '#fdfdfd',
+            borderTopWidth: 0.7,
+            borderTopColor: '#eee',
+            borderStyle: 'solid',
         },
         labelStyle: { // label的样式
             height: 20,

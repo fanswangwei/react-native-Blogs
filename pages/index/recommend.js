@@ -11,7 +11,7 @@ import {
 export default class Recommend extends Component {
     render() {
         return (
-            <View style={[styles.container, {backgroundColor:'#ff7f50'}]}><Text>推荐</Text></View>
+            <View style={[styles.container, {backgroundColor:'#ffffff'}]}><Text>推荐</Text></View>
         )
     }
 }
