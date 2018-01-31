@@ -12,6 +12,14 @@ import {
 import HeadPortrait from './aboutMe/headPortrait';
 import MineItem from './aboutMe/mineItem';
 
+const Info = require('./../resources/info.png');
+const Sort = require('./../resources/sort.png');
+const Theme = require('./../resources/theme.png');
+const Collect = require('./../resources/collect.png');
+const SystemNews = require('./../resources/syetemNews.png');
+const SendAdvice = require('./../resources/sendAdvice.png');
+const Setting = require('./../resources/setting.png');
+
 export default class AboutMe extends Component {
     render() {
         return (
@@ -19,26 +27,26 @@ export default class AboutMe extends Component {
                 <HeadPortrait/>
                 <View style={styles.itemsContainer}>
                     <View style={[styles.borderBottom, styles.marginRow]}>
-                        <MineItem props="个人信息"/>
+                        <MineItem title="个人信息" icon={Info} newsNum="0"/>
                     </View>
                     <View style={[styles.borderBottom, styles.marginRow]}>
-                        <MineItem props="我的分类"/>
+                        <MineItem title="我的分类" icon={Sort} newsNum="1"/>
                     </View>
                     <View style={[styles.borderBottom, styles.marginRow]}>
-                        <MineItem props="我的主题"/>
+                        <MineItem title="我的主题" icon={Theme} newsNum="2"/>
                     </View>
                     <View style={[styles.borderBottom, styles.marginRow]}>
-                        <MineItem props="我的收藏"/>
+                        <MineItem title="我的收藏" icon={Collect} newsNum="3"/>
                     </View>
                     <View style={styles.marginRow}>
-                        <MineItem props="系统消息"/>
+                        <MineItem title="系统消息" icon={SystemNews} newsNum="4"/>
                     </View>
                 </View>
                 <View style={[styles.activeContainer, styles.paddingRow]}>
-                    <MineItem props="意见反馈"/>
+                    <MineItem title="意见反馈" icon={SendAdvice} newsNum="5"/>
                 </View>
                 <View style={[styles.setting, styles.paddingRow]}>
-                    <MineItem props="设置"/>
+                    <MineItem title="设置" icon={Setting} newsNum="6"/>
                 </View>
             </ScrollView>
         );

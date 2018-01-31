@@ -8,16 +8,23 @@ import {
     StyleSheet
 } from 'react-native';
 
-const Setting = require('./../../resources/setting.png');
 const ToRight = require('./../../resources/to-right.png');
 
 export default class MainItem extends Component {
+	constructor(props){
+     	super(props);
+     	this.state={
+          	title: this.props.title, // 通过props初始化编辑便签子组件的state
+          	icon: this.props.icon,
+          	newsNum: this.props.newsNum ? this.props.newsNum : 0,
+     	}
+  	}
 	render () {
 		return (
 			<View style={styles.container}>
-                <Image source={Setting} style={styles.icon}/>
-                <Text style={styles.title}>个人信息</Text>
-                <Text style={styles.number}>1</Text>
+                <Image source={this.props.icon} style={styles.icon}/>
+                <Text style={styles.title}>{this.props.title}</Text>
+                <Text style={[styles.number, this.props.newsNum > 0 ? styles.newsTips : '']}>{this.props.newsNum}</Text>
                 <Image source={ToRight}  style={styles.toDetail}/>
 			</View>
 		)
@@ -56,4 +63,7 @@ const styles = StyleSheet.create({
 		top: 0.5,
 		right: 3,
 	},
+	newsTips: {
+		color: '#d81e06',
+	}
 })
