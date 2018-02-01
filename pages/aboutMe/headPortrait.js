@@ -16,7 +16,7 @@ export default class HeadPortrait extends Component {
 	render () {
 		return (
 			<View style={styles.container}>
-                <ImageBackground style={styles.imageBg} source={HeadImg}>
+                <ImageBackground style={styles.imageBg} source={HeadImgBG}>
                 	<Image style={styles.image} source={HeadImg} />
                 	<Text style={styles.nameText}>fans_wangwei@163.com</Text>
                 	<View style={[styles.textContainer]}>
