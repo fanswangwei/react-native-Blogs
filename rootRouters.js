@@ -47,8 +47,8 @@ const TabNav = TabNavigator({
         navigationOptions: ({navigation, screenProps}) => ({
             // headerTitle: '首页',
             headerStyle: {height: 0},
-            // headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', },
-            headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
+            // headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#FF7B7B', },
+            headerTitleStyle: {fontSize: 14, color:'#FF7B7B', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '首页',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
                 return (
@@ -64,8 +64,8 @@ const TabNav = TabNavigator({
         // navigationOptions: () => TabOptions('发现', findIcon, findIconActive),
         navigationOptions: ({navigation, screenProps}) => ({
             headerTitle: '定制分类',
-            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', backgroundColor: '#fdfdfd'},
-            headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
+            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#FF7B7B', backgroundColor: '#fdfdfd'},
+            headerTitleStyle: {fontSize: 14, color:'#FF7B7B', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '分类',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
                 return (
@@ -81,8 +81,8 @@ const TabNav = TabNavigator({
         // navigationOptions: () => TabOptions('动态', stateIcon, stateIconActive),
         navigationOptions: ({navigation, screenProps}) => ({
             headerTitle: '消息动态',
-            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#d81e06', backgroundColor: '#fdfdfd'},
-            headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
+            headerStyle: {height: 45, borderBottomWidth: 1, borderStyle: 'solid', borderColor: '#FF7B7B', backgroundColor: '#fdfdfd'},
+            headerTitleStyle: {fontSize: 14, color:'#FF7B7B', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '动态',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
                 return (
@@ -99,7 +99,7 @@ const TabNav = TabNavigator({
         navigationOptions: ({navigation, screenProps}) => ({
             // headerTitle: '我的',
             headerStyle: {height: 0},
-            // headerTitleStyle: {fontSize: 14, color:'#d81e06', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
+            // headerTitleStyle: {fontSize: 14, color:'#FF7B7B', fontWeight: 'normal', marginLeft: 'auto', marginRight: 'auto' },
             tabBarLabel: '我的',
             tabBarIcon: ({tintColor, focused}) => { // tintColor激活前后的颜色，focused激活状态
                 return (
@@ -118,7 +118,7 @@ const TabNav = TabNavigator({
     lazy: true, // 是否根据需要懒惰呈现标签，而不是提前制作，意思是在app打开的时候将底部标签栏全部加载，默认false,推荐改成true哦。
     backBehavior: 'none', // 按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
     tabBarOptions: {
-        activeTintColor: '#d81e06', // label和icon的前景色 活跃状态下（选中）。
+        activeTintColor: '#FF7B7B', // label和icon的前景色 活跃状态下（选中）。
         inactiveTintColor: '#666', // label和icon的前景色 不活跃状态下(未选中)。
         showIcon: true, // 是否显示图标，默认关闭。
         showLabel: true, // android 是否展现文字 默认 true 
@@ -175,7 +175,7 @@ const MyNav = StackNavigator({
 const styles = StyleSheet.create({
     NavBarTitle:{
         borderWidth:1,
-        borderColor:'#d81e06',
+        borderColor:'#FF7B7B',
         width:'80%',
         borderRadius:20,
         height:30,

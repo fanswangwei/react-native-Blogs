@@ -27,7 +27,7 @@ export default class HomeIndex extends Component {
                 renderTabBar={() => <ScrollableTabBar/>}
                 tabBarTextStyle={styles.tabBarTextStyle} 
                 tabBarUnderlineStyle={styles.tabBarUnderlineStyle} 
-                tabBarActiveTextColor='#d81e06'
+                tabBarActiveTextColor='#FF7B7B'
                 tabBarInactiveTextColor='#666666'
                 initialPage={0}
                 tabBarPosition='top'
@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
     },
     tabBarUnderlineStyle:{
         height: 0,
-        backgroundColor: '#d81e06',
+        backgroundColor: '#FF7B7B',
     },
 })

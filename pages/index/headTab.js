@@ -15,7 +15,7 @@ export default class HeadTab extends Component {
                     <ScrollableTabView 
                         tabBarTextStyle={styles.tabBarTextStyle} 
                         tabBarUnderlineStyle={styles.tabBarUnderlineStyle} 
-                        tabBarActiveTextColor='#d81e06'
+                        tabBarActiveTextColor='#FF7B7B'
                         tabBarInactiveTextColor='#666666'
                         initialPage={0}  
                     >
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         lineHeight: 25,
     },
     tabBarUnderlineStyle:{
-        backgroundColor: '#d81e06',
+        backgroundColor: '#FF7B7B',
         height: 1,
     },
 })

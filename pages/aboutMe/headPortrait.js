@@ -10,14 +10,13 @@ import {
 
 
 const HeadImg = require('./../../resources/head.jpg');
-const HeadImgBG = require('./../../resources/head-bg.jpg');
+const HeadImgBG = require('./../../resources/img_my_head.png');
 
 export default class HeadPortrait extends Component {
 	render () {
 		return (
 			<View style={styles.container}>
-                <ImageBackground style={styles.imageBg} source={HeadImg}>
-                	<View style={styles.mask}></View>
+                <ImageBackground style={styles.imageBg} source={HeadImgBG}>
                 	<Image style={styles.image} source={HeadImg} />
                 	<Text style={styles.nameText}>fans_wangwei@163.com</Text>
                 	<View style={[styles.textContainer]}>
@@ -63,6 +62,7 @@ const styles = StyleSheet.create({
 		top: 115,
 		left: 0,
 		textAlign: 'center',
+		color: '#ffffff',
 	},
 	textContainer: {
 		position: 'absolute',
@@ -78,13 +78,15 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		borderRightWidth: 1,
         alignItems: 'center', 
-		borderColor: '#d81e06',
+		borderColor: '#ffffff',
 		borderStyle: 'solid',
+		color: '#ffffff',
 	},
 	fans: {
 		width: '50%',
 		height: 20,
         alignItems: 'center', 
 		textAlign: 'center',
+		color: '#ffffff',
 	},
 })

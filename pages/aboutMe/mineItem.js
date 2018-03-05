@@ -64,6 +64,6 @@ const styles = StyleSheet.create({
 		right: 3,
 	},
 	newsTips: {
-		color: '#d81e06',
+		color: '#FF7B7B',
 	}
 })
