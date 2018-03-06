@@ -111,7 +111,7 @@ const TabNav = TabNavigator({
         }),
     },
 }, {
-    initialRouteName: 'AboutMe', // 默认显示界面  initialRouteName - 首次加载时初始标签路由的routeName
+    initialRouteName: 'TypeSelect', // 默认显示界面  initialRouteName - 首次加载时初始标签路由的routeName
     tabBarPosition: 'bottom', // 设置tabbar的位置，iOS默认在底部，安卓默认在顶部。（属性值：'top'，'bottom')
     swipeEnabled: false, // 是否允许在标签之间进行滑动。
     animationEnabled: true, // 是否在更改标签时显示动画。
